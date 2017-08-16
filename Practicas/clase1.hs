@@ -14,6 +14,10 @@ suma = sum(filter(oddNum)[1..1000000])
 uppercase x = [str | char<-x, let str = toUpper char]
 
 -- Ejercicio #5
-factorial x = fac x
 fac 0 = 1
-fac x = x * (fac (x-1))
+factorial x = x * (fac (x-1))
+
+--ultimos [] n = error
+--ultimos a 0 = error
+ultimos a 1 = last a
+ultimos a n = (ultimos( (init a) (n - 1))) ++ (last a)
