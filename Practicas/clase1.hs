@@ -20,4 +20,5 @@ factorial x = x * (fac (x-1))
 --ultimos [] n = error
 --ultimos a 0 = error
 ultimos a 1 = last a
-ultimos a n = (ultimos( (init a) (n - 1))) ++ (last a)
+ultimos a n = init a ++ [last a + n]
+--ultimos a n = (ultimos( (init a) (n - 1))) ++ (last a)
