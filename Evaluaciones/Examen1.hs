@@ -63,7 +63,10 @@ inslist l = insertList l EmptyTree
                 | otherwise     = insertList (drop 1 l) (insertTree (head l) arbol)
 
 -- Test
--- l = inslist [21,5,4,42,6,3,7,45,78,2,8,46,12,1,9]
+l = inslist [21,5,4,42,6,3,7,45,78,2,8,46,12,1,9]
 
 printTree EmptyTree = ""
 printTree (Node y left right) = (printTree left) ++ " " ++ (show y) ++ (printTree right)
+
+treeToList EmptyTree = []
+treeToList (Node y left right) = (treeToList left) ++ [y] ++ (treeToList right)
