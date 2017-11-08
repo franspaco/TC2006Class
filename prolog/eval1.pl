@@ -15,31 +15,3 @@ quicksort([LH|LT], Sorted):-
     append([LH], SortedR, B),
     append(SortedL, B, Sorted).
 quicksort([], []).
-/*
-separa(Num, [], A, A, B, B).
-separa(Num, [H|T], X, A, Y, B):-
-    H < Num,
-    write('LT\n'),
-    append(X, [H], L),
-    write(L),
-    write('-L\n').
-separa(Num, [H|T], X, A, Y, B):-
-    H >= Num,
-    write('GE\n'),
-    append(Y, [H], R),
-    write(R),
-    write('-R\n').
-/*
-separa(Num, [H|T], X, A, Y, B):-
-    H < Num ->
-    write('LT\n'),
-    append(X, [H], L),
-    write(L),
-    write('-L\n');
-    /*separa(Num, T, L, A, Y, B);
-    write('GE\n'),
-    append(B, [H], R),
-    write(R),
-    write('-R\n')
-    separa(Num, T, X, A, R, B).
-*/
